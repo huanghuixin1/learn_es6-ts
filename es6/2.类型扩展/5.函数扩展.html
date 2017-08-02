@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!--函数默认值-->
+<script>
+    function test(a = 1, b = 2) {
+    }
+</script>
+
+<!--箭头函数-->
+<script>
+    function testFunc() {
+        this.data = []
+
+        setTimeout(function () {
+            this.data = [1, 2, 3, 4]
+        }, 100)
+
+//        setTimeout(() => {
+//            this.data = [1, 2, 3, 4]
+//        }, 100)
+    }
+
+    let t = new testFunc()
+    setTimeout(() => {
+        console.log(t.data)
+    }, 500)
+</script>
