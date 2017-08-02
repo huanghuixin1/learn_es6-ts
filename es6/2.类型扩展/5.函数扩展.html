@@ -13,6 +13,18 @@
 <script>
     function test(a = 1, b = 2) {
     }
+
+    // 解构赋值
+    let person = {name: 'hhx', age: 18}
+    let {age, name} = person
+    console.log(name, age)
+
+
+    function showPerson({age, name}) {
+
+    }
+
+    showPerson(person)
 </script>
 
 <!--箭头函数-->
