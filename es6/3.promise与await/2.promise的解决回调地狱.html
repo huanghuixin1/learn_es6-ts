@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    function getData() {
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(123)
+            }, 1e3)
+        })
+    }
+
+    function getData2(val) {
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('最终结果:' + val + 1)
+            }, 1e3)
+        })
+    }
+
+
+    getData().then((ret) => {
+        return ret
+    }).then((ret) => {
+        console.log('第二次:' + ret)
+    })
+
+    // promise.all promise.race
+</script>

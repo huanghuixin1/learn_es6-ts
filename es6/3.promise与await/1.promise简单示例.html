@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+
+<script>
+    function testVal(val) {
+        let p = new Promise((resolve, reject) => {
+            if (val == 0) {
+                resolve(true)
+            } else {
+                reject('shit error')
+            }
+
+        })
+
+        return p
+    }
+
+    let pSimple = testVal(0)
+    pSimple.then((ret) => {
+        console.log(ret)
+    }).catch((ret) => {
+        console.log(ret)
+    })
+
+    //
+   /* pSimple.then((ret) => {
+        console.log(ret)
+    }, err => {
+        console.log(err)
+    })*/
+
+</script>
